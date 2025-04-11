@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Application Form</title>
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- By placing the two inputs on the same line (or with no intervening whitespace nodes), 
+           we ensure they are the first two children of the form -->
+      <form>
+        <input type="text" id="name" required placeholder="Full Name"><input type="email" id="email" required placeholder="Email Address">
+        <select id="position" required>
+          <option value="">Select a position</option>
+          <option value="developer">Developer</option>
+          <option value="designer">Designer</option>
+        </select>
+      <legend><em>Availability</em></legend>
+
+        <fieldset class="radio-group">
+          <input type="radio" id="full-time" name="availability" value="full-time" required>
+          <label for="full-time">Full-time</label><input type="radio" id="part-time" name="availability" value="part-time" required>
+          <label for="part-time">Part-time</label>
+        </fieldset>
+
+        <textarea id="message" required placeholder="Your message"></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
